@@ -16,7 +16,9 @@ RUN chmod 777 ./run.sh
 ENV RDPASS Globiq2015#
 
 # set the host
-ENV MYHOST $(/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{print $1}')
+#ENV MYHOST $(/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{print $1}')
+
+ENV MYHOST 172.16.3.132
 
 # From address when sending email
 ENV MAILFROM MAILFROM
@@ -33,7 +35,7 @@ ENTRYPOINT /run.sh
 COPY ./runtalendjob.sh /
 RUN chmod 777 ./runtalendjob.sh
 
-ADD ./rundeckdeploy/* /etc/talend/jobs/
+#ADD ./rundeckdeploy/* /etc/talend/jobs/
 
 #VOLUMES
 VOLUME /var/lib/rundeck/data
