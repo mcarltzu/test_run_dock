@@ -1,3 +1,6 @@
+**NOTE: THIS TEST REPOSITORY IS NOT WORKING**
+
+
 This image on the [Docker Hub](https://registry.hub.docker.com/u/x110dc/rundeck/) so running it can be as
 simple as:
 ```
